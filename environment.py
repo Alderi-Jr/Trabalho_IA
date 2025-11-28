@@ -75,16 +75,7 @@ class ApocalypseEnvironment(gym.Env):
                             num_rocks=2,
                             num_supplies=4,
                             num_zombies=5):
-        """
-        Generate a fully-random map:
-        - Walls: pct_walls fraction of total cells (rounded)
-        - Rocks: num_rocks
-        - Supplies: num_supplies
-        - Zombies: num_zombies
-        - Safe zone: 1 random cell
-        Guarantees: no overlap between any elements or agent_start.
-        Does NOT guarantee path connectivity (as requested).
-        """
+
         rng = np.random.RandomState(seed)
 
         total_cells = self.grid_size * self.grid_size
