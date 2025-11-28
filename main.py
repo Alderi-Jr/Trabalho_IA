@@ -8,11 +8,6 @@ from qlearning import QLearning
 # ------------------------------- TREINAMENTO -------------------------------
 
 def train_with_hud(env, qlearn, episodes=3000):
-    """
-    Treina usando qlearn.train(), atualizando o HUD.
-    Espera que qlearn.train retorne:
-      q_table, best_reward, ctrl, best_actions, episodes_run
-    """
 
     def callback(ep, eps, ep_reward, best_reward):
         env.training_episode = ep
